@@ -1,0 +1,12 @@
+<template name="party-details">
+    Here you will see and change the details of the party:
+
+    <input ng-model="party.name">
+    <input ng-model="party.description">
+    <ul>
+        Users to invite:
+        <li ng-repeat="user in users | uninvited:party">
+            <div>{{ user | displayName }}</div>
+        </li>
+    </ul>
+</template>
